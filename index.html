@@ -1,47 +1,184 @@
+<!--Author:Mohamed, Kinglsey,John and Bachir
+    Date:20/07/2019- 02-08-2019
+    
+-->
 <!DOCTYPE html>
 <html>
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Layout Master</title>
-  <link rel="stylesheet" type="text/css" href="./style.css">
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/index_style.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"> -->
 
 <body>
-
-  <section class="header">
-    <div class="container">
-      <button type="button" class="login-btn">Login</button>
+  <!-- Section the main page nav bar -->
+  <section class="navigationBar">
+    <!--top navbarwith register and login option -->
+    <div class="loginNav">
+      <nav class="navbar mylogin navbar-expand-lg">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link active" href="#">login <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#">Register</a>
+          </div>
+        </div>
+      </nav>
     </div>
-    <h1> WELCOME TO TRAVEL EXPERT </h1>
-    <p> Travel The Globe With Best Agency</p>
-    <div class=" input-group">
-      <input type="text" class="form-control" placeholder="Search Country By Or City">
-      <div class="input-group-append">
-        <button type="submit" class="input-group-text btn">Search</button>
+    <!--Bottom navbar with option for customer that include logo,Home,vacation,Flight,Hotel,Contact -->
+    <nav class="navbar mynavbar navbar-expand-lg ">
+      <a class="navbar-brand" href="#"><span><i class="fa fa-plane" aria-hidden="true"></i> TRAVEL</span> EXPERT</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              VACATION
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              FLIGHTS
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              HOTELS
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+  <!--section main that include top menu header which inlude search option for the different packages-->
+  <section class="header d-flex align-items-lg-end align-items-md-end">
+    <div class="container  ">
+      <div class="row">
+        <div class="col-lg-9 offset-lg-3 col-md-9 offset-md-3">
+          <form class="needs-validation vacation-form" novalidate>
+            <div class="form-row">
+              <div class="btn-group">
+                <button class="btn btn-primary" type="submit"><i class="fa fa-globe" aria-hidden="true"></i>
+                  VACATION</button>
+                <button class="btn btn-primary" type="submit"><i class="fa fa-bed"
+                    aria-hidden="true"></i>HOTELS+</button>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label for="validationAirport">Departing From</label>
+                <input type="text" class="form-control placeicon" id="validationCustom03" placeholder='&#xf041; FROM'
+                  required>
+                <div class="invalid-feedback">
+                  Please provide a valid city.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="validationAirport">Going To</label>
+                <input type="text" class="form-control placeicon" id="validationCustom04" placeholder="&#xf041; TO"
+                  required>
+                <div class="invalid-feedback">
+                  Please provide a City.
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-4 mb-3">
+                  <label for="validationCustom05">Departure Date</label>
+                  <input type="date" class="form-control placeicon" id="validationCustom05" placeholder="&#xf073; Date"
+                    required>
+                  <div class="invalid-feedback">
+                    Please provide a valid date.
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="validationCustom05">Return Date</label>
+                  <input type="date" class="form-control placeicon" id="validationCustom05"
+                    placeholder="&#xf073; Adults" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid date.
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="validationCustom05">Travellers</label>
+                  <input type="number" class="form-control placeicon" id="validationCustom05" value="1"
+                    placeholder="&#xf183;  Travellers " required>
+                  <div class="invalid-feedback">
+                    Please provide Number of travel.
+                  </div>
+                </div>
+              </div>
+              <div id="input-btn">
+                <button class="btn btn-primary" type="submit">SEARCH</button>
+              </div>
+          </form>
+        </div>
       </div>
     </div>
   </section>
+  <!--section that include best packages as features with location, packages description, timeline-->
   <section class="features">
-    <h1>Future Destination</h1>
+    <h1>Best Destination</h1>
     <div class="container">
       <div class="row">
         <div class="col-md-4">
           <div class="feature-box">
-            <div class="feature-img">
-              <img src="img/coupleinpalm.jpg" alt="">
-              <div class="price">
-                <p>$700</p>
+            <a href="#">
+              <div class="feature-img">
+                <div class="order d-flex justify-content-center">
+                  <button type="button" class="btn btn-primary">Book Now</button>
+                </div>
+                <img src="img/coupleinpalm.jpg" alt="">
+                <div class="price">
+                  <p>$700</p>
+                </div>
+                <div class="rating">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                </div>
               </div>
-              <div class="rating">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+            </a>
 
-              </div>
-            </div>
+
             <div class="feature-details">
               <h4>The Bahanas</h4>
               <p>The Bahamas is a coral-based archipelago in the Atlantic Ocean. Its 700-plus islands and cays range
@@ -55,21 +192,25 @@
             </div>
           </div>
         </div>
+
         <div class="col-md-4">
           <div class="feature-box">
-            <div class="feature-img">
-              <img src="img/oldcity.jpg" alt="">
-              <div class="price">
-                <p>$659</p>
+            <a href="#">
+              <div class="feature-img">
+                <img src="img/oldcity.jpg" alt="">
+                <div class="price">
+                  <p>$659</p>
+                </div>
+                <div class="rating">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
               </div>
-              <div class="rating">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                <i class="fa fa-star-o" aria-hidden="true"></i>
-              </div>
-            </div>
+            </a>
+
             <div class="feature-details">
               <h4>Greece</h4>
               <p>Greece is a country in southeastern Europe with thousands of islands throughout the Aegean and Ionian
@@ -85,19 +226,21 @@
         </div>
         <div class="col-md-4">
           <div class="feature-box">
-            <div class="feature-img">
-              <img src="img/bora.jpg" alt="">
-              <div class="price">
-                <p>$900</p>
+            <a href="">
+              <div class="feature-img">
+                <img src="img/bora.jpg" alt="">
+                <div class="price">
+                  <p>$900</p>
+                </div>
+                <div class="rating">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
               </div>
-              <div class="rating">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                <i class="fa fa-star-o" aria-hidden="true"></i>
-              </div>
-            </div>
+            </a>
             <div class="feature-details">
               <h4>Bora Bora</h4>
               <p>Bora Bora is a small South Pacific island northwest of Tahiti in French Polynesia. Surrounded by
@@ -114,6 +257,7 @@
       </div>
     </div>
   </section>
+  <!--section section that inlude travelling gallery for the different location-->
   <section class="gallery">
     <h1>Travelling Gallery</h1>
     <div class="container">
@@ -158,34 +302,58 @@
           </div>
         </div>
       </div>
-    </div>    
+    </div>
   </section>
-  <section class="users-feedback">
-    <h1> User Review</h1>
+  <!--section for Agent Info which include agent info and location-->
+  <section class="Agent-description">
+    <h1>Agents Information</h1>
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
-          <div class="user-review">
-            <p>Bora Bora is a small South Pacific island northwest of Tahiti in French Polynesia. Surrounded by
-              sand-fringed motus (islets) and a turquoise lagoon protected by a coral reef, it’s known for its scuba
-              diving. It's also a popular luxury resort destination. </p>
+        <div class="col-md-3">
+          <div class="agent-desc">
+            <img src="../img/1.jpg" alt="">
+            <h5>Name: </h5>
+            <small>City:</small><br>
+            <button class='btn btn-primary ' type='submit' data-toggle='modal' data-target='1'> VIEW MORE
+              DETAILS</button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="agent-desc">
+            <img src="img/2.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero fugiat temporibus tenetur eveniet magni
+              quaerat? </p>
             <h5>John Doe</h5>
             <small>Calgary</small>
           </div>
         </div>
-        <div class="col-md-4"></div>
-        <div class="col-md-4"></div>
+        <div class="col-md-3">
+          <div class="agent-desc">
+            <img src="img/3.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero fugiat temporibus tenetur eveniet magni
+              quaerat? </p>
+            <h5>John Doe</h5>
+            <small>Calgary</small>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="agent-desc">
+            <img src="img/3.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero fugiat temporibus tenetur eveniet magni
+              quaerat? </p>
+            <h5>John Doe</h5>
+            <small>CitCalgary</small>
+          </div>
+        </div>
       </div>
     </div>
-
+    <!--Footer information That include compay information and contact info -->
   </section>
   <section class="footer">
     <div class="container">
       <div class="row">
         <div class="col-md-3"> <img src="#" alt="">
-          <!-- <p>Bora Bora is a small South Pacific island northwest of Tahiti in French Polynesia. Surrounded by
-            sand-fringed motus (islets) and a turquoise lagoon protected by a coral reef, it’s known for its scuba
-            diving. It's also a popular luxury resort destination. </p> -->
+          <!-- Empty dive to add info about company-->
         </div>
         <div class="col-md-3">
           <h4> Features</h4>
@@ -207,15 +375,14 @@
         </div>
       </div>
       <hr>
-      <p Class="copyright"> Made By <i class="fa fa-heart">BJMO TECH</i> </p>
+      <p Class="copyright"> COPYRIGHT <i class="fa fa-heart"> BY BJMO TECH</i> </p>
     </div>
 
   </section>
 
 
 
-  <!-- <section class="zone blue">Project Grid</section>
-  <section class="zone yellow">Footer</section> -->
+  <!-- JS source code -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
